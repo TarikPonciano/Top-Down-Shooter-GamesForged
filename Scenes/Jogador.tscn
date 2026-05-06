@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://gfksrepxh8se"]
+
+[ext_resource type="Script" uid="uid://bp018nmhljmkd" path="res://Scenes/jogador.gd" id="1_0ddml"]
+[ext_resource type="Texture2D" uid="uid://bc1372t5u8hrm" path="res://Assets/Skins.png" id="1_0up15"]
+[ext_resource type="Texture2D" uid="uid://dbi7hcd7adqih" path="res://Assets/Weapons.png" id="2_0ddml"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0up15"]
+radius = 109.165016
+
+[node name="Jogador" type="CharacterBody2D" unique_id=950448249]
+script = ExtResource("1_0ddml")
+
+[node name="Label" type="Label" parent="." unique_id=1440716806]
+offset_left = -405.0
+offset_top = -473.0
+offset_right = 786.0
+offset_bottom = -156.0
+theme_override_font_sizes/font_size = 56
+text = "https://meet.google.com/wwf-cpdo-fty
+
+IMPLEMENTAR A ARMA
+IMPLEMENTAR MOVIMENTAÇÃO TOP DOWN"
+
+[node name="Sprite" type="Node2D" parent="." unique_id=739864360]
+
+[node name="Corpo" type="Sprite2D" parent="Sprite" unique_id=1338443223]
+texture = ExtResource("1_0up15")
+region_enabled = true
+region_rect = Rect2(1971, 1365, 197, 105)
+
+[node name="Mochila" type="Sprite2D" parent="Sprite" unique_id=1488539078]
+position = Vector2(2, -80)
+texture = ExtResource("1_0up15")
+region_enabled = true
+region_rect = Rect2(1967, 1206, 205, 140)
+
+[node name="Braço Esquerdo" type="Sprite2D" parent="Sprite" unique_id=1804952851]
+position = Vector2(49.999996, 121.99999)
+rotation = 0.017710865
+texture = ExtResource("1_0up15")
+region_enabled = true
+region_rect = Rect2(2601, 1203, 132, 243)
+
+[node name="Braço Direito" type="Sprite2D" parent="Sprite" unique_id=1639944051]
+position = Vector2(-62, 69)
+rotation = -0.26094154
+texture = ExtResource("1_0up15")
+region_enabled = true
+region_rect = Rect2(2421, 1220, 103, 199)
+
+[node name="Arma" type="Sprite2D" parent="Sprite" unique_id=1859421758]
+position = Vector2(-1, 193)
+texture = ExtResource("2_0ddml")
+region_enabled = true
+region_rect = Rect2(1113, 459, 68, 336)
+
+[node name="Cabeça" type="Sprite2D" parent="Sprite" unique_id=581789938]
+texture = ExtResource("1_0up15")
+region_enabled = true
+region_rect = Rect2(2187, 1194, 165, 165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=527289971]
+shape = SubResource("CircleShape2D_0up15")
