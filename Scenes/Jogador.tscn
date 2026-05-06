@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://gfksrepxh8se"]
 
-[ext_resource type="Script" uid="uid://bp018nmhljmkd" path="res://Scenes/jogador.gd" id="1_0ddml"]
+[ext_resource type="Script" uid="uid://bp018nmhljmkd" path="res://Scripts/jogador.gd" id="1_0ddml"]
 [ext_resource type="Texture2D" uid="uid://bc1372t5u8hrm" path="res://Assets/Skins.png" id="1_0up15"]
 [ext_resource type="Texture2D" uid="uid://dbi7hcd7adqih" path="res://Assets/Weapons.png" id="2_0ddml"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0up15"]
-radius = 109.165016
+radius = 28.442924
 
 [node name="Jogador" type="CharacterBody2D" unique_id=950448249]
+rotation = -0.0073956605
 script = ExtResource("1_0ddml")
 
 [node name="Label" type="Label" parent="." unique_id=1440716806]
+visible = false
 offset_left = -405.0
 offset_top = -473.0
 offset_right = 786.0
@@ -22,6 +24,8 @@ IMPLEMENTAR A ARMA
 IMPLEMENTAR MOVIMENTAÇÃO TOP DOWN"
 
 [node name="Sprite" type="Node2D" parent="." unique_id=739864360]
+rotation = -1.5707964
+scale = Vector2(0.25, 0.25)
 
 [node name="Corpo" type="Sprite2D" parent="Sprite" unique_id=1338443223]
 texture = ExtResource("1_0up15")
