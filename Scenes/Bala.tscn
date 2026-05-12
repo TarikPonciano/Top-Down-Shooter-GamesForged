@@ -1,66 +1,21 @@
 [gd_scene format=3 uid="uid://brsqkwqougj6"]
 
-[ext_resource type="Texture2D" uid="uid://ccsvsvdlkpy70" path="res://Assets/All_Fire_Bullet_Pixel_16x16_05.png" id="1_et1n4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_et1n4"]
-atlas = ExtResource("1_et1n4")
-region = Rect2(176, 305, 16, 15)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3tbbd"]
-atlas = ExtResource("1_et1n4")
-region = Rect2(192, 305, 16, 15)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eysv6"]
-atlas = ExtResource("1_et1n4")
-region = Rect2(208, 305, 16, 15)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nh0qf"]
-atlas = ExtResource("1_et1n4")
-region = Rect2(224, 305, 16, 15)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sv5kv"]
-atlas = ExtResource("1_et1n4")
-region = Rect2(240, 305, 16, 15)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6u3qc"]
-atlas = ExtResource("1_et1n4")
-region = Rect2(256, 305, 16, 15)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ow1hg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_et1n4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3tbbd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eysv6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nh0qf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sv5kv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6u3qc")
-}],
-"loop": true,
-"name": &"default",
-"speed": 20.0
-}]
+[ext_resource type="Script" uid="uid://clahcp4b42sal" path="res://Scripts/bala.gd" id="1_3tbbd"]
+[ext_resource type="SpriteFrames" uid="uid://cydw05ftx8lql" path="res://Assets/animacao_bala.tres" id="1_et1n4"]
+[ext_resource type="Texture2D" uid="uid://cxtuu4uini2i7" path="res://Assets/icon.svg" id="2_3tbbd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_et1n4"]
-radius = 6.0
 
 [node name="Bala" type="Area2D" unique_id=1299196130]
+script = ExtResource("1_3tbbd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1038217873]
-sprite_frames = SubResource("SpriteFrames_ow1hg")
+sprite_frames = ExtResource("1_et1n4")
 autoplay = "default"
-frame_progress = 0.49139082
+frame_progress = 0.36194688
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1133580495]
 shape = SubResource("CircleShape2D_et1n4")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=233621511]
+texture = ExtResource("2_3tbbd")

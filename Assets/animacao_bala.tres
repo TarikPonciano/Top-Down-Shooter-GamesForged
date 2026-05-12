@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cydw05ftx8lql"]
+
+[ext_resource type="Texture2D" uid="uid://ccsvsvdlkpy70" path="res://Assets/All_Fire_Bullet_Pixel_16x16_05.png" id="1_nakf7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et1n4"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(176, 305, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tbbd"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(192, 305, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eysv6"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(208, 305, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh0qf"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(224, 305, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv5kv"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(240, 305, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6u3qc"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(256, 305, 16, 15)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et1n4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tbbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eysv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh0qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv5kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6u3qc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
