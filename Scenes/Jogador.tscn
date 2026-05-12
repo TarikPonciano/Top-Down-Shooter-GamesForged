@@ -8,7 +8,6 @@
 radius = 28.442924
 
 [node name="Jogador" type="CharacterBody2D" unique_id=950448249]
-rotation = -0.0073956605
 script = ExtResource("1_0ddml")
 
 [node name="Label" type="Label" parent="." unique_id=1440716806]
