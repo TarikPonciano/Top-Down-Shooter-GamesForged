@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://bp018nmhljmkd" path="res://Scripts/jogador.gd" id="1_0ddml"]
 [ext_resource type="Texture2D" uid="uid://bc1372t5u8hrm" path="res://Assets/Skins.png" id="1_0up15"]
 [ext_resource type="Texture2D" uid="uid://dbi7hcd7adqih" path="res://Assets/Weapons.png" id="2_0ddml"]
+[ext_resource type="PackedScene" uid="uid://brsqkwqougj6" path="res://Scenes/Bala.tscn" id="2_mspdc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0up15"]
 radius = 28.442924
 
 [node name="Jogador" type="CharacterBody2D" unique_id=950448249]
 script = ExtResource("1_0ddml")
+bala_cena = ExtResource("2_mspdc")
 
 [node name="Label" type="Label" parent="." unique_id=1440716806]
 visible = false
@@ -64,3 +66,6 @@ region_rect = Rect2(2187, 1194, 165, 165)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=527289971]
 shape = SubResource("CircleShape2D_0up15")
+
+[node name="PontaDaArma" type="Marker2D" parent="." unique_id=1959592987]
+position = Vector2(90, 0)
