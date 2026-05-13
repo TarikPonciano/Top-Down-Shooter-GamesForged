@@ -29,7 +29,7 @@ func disparar():
 	nova_bala.direcao = (ponta_arma.global_position - global_position).normalized()
 	
 	#Ajuste necessário para balas que não são redondas
-	nova_bala.look_at(get_global_mouse_position())
+	nova_bala.rotation = rotation
 	
 	#3. Adicionar a bala na fase
 	get_tree().current_scene.add_child(nova_bala)

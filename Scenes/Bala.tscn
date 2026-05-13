@@ -11,9 +11,8 @@ script = ExtResource("1_3tbbd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1038217873]
 sprite_frames = ExtResource("1_et1n4")
-animation = &"bala_2"
-autoplay = "bala_2"
-frame_progress = 0.6464952
+animation = &"bala_3"
+autoplay = "bala_3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1133580495]
 shape = SubResource("CircleShape2D_et1n4")
