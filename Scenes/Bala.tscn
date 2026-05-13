@@ -4,6 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://cydw05ftx8lql" path="res://Assets/animacao_bala.tres" id="1_et1n4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_et1n4"]
+radius = 6.0827627
 
 [node name="Bala" type="Area2D" unique_id=1299196130]
 script = ExtResource("1_3tbbd")
@@ -11,7 +12,7 @@ script = ExtResource("1_3tbbd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1038217873]
 sprite_frames = ExtResource("1_et1n4")
 autoplay = "default"
-frame_progress = 0.7366106
+frame_progress = 0.27170697
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1133580495]
 shape = SubResource("CircleShape2D_et1n4")
