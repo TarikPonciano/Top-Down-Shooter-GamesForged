@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bc1372t5u8hrm" path="res://Assets/Skins.png" id="1_0up15"]
 [ext_resource type="Texture2D" uid="uid://dbi7hcd7adqih" path="res://Assets/Weapons.png" id="2_0ddml"]
 [ext_resource type="PackedScene" uid="uid://brsqkwqougj6" path="res://Scenes/Bala.tscn" id="2_mspdc"]
+[ext_resource type="AudioStream" uid="uid://dvwkyfu8reaxp" path="res://Assets/AK-47-Gun-Sound-Effects-I-Machine-Gun-Sound-Effects-Rapid-Fire-Sound-Effect-_youtube_.ogg" id="5_let3y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0up15"]
 radius = 28.442924
@@ -69,3 +70,7 @@ shape = SubResource("CircleShape2D_0up15")
 
 [node name="PontaDaArma" type="Marker2D" parent="." unique_id=1959592987]
 position = Vector2(90, 0)
+
+[node name="SomDoTiro" type="AudioStreamPlayer2D" parent="." unique_id=1022471402]
+stream = ExtResource("5_let3y")
+pitch_scale = 0.8

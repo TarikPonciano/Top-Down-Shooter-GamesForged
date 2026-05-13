@@ -2,6 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://ccsvsvdlkpy70" path="res://Assets/All_Fire_Bullet_Pixel_16x16_05.png" id="1_nakf7"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjsjf"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(256, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gidij"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(272, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6k7yn"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(288, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hb1k"]
+atlas = ExtResource("1_nakf7")
+region = Rect2(304, 128, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_et1n4"]
 atlas = ExtResource("1_nakf7")
 region = Rect2(176, 305, 16, 15)
@@ -28,6 +44,23 @@ region = Rect2(256, 305, 16, 15)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjsjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gidij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6k7yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hb1k")
+}],
+"loop": true,
+"name": &"bala_2",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_et1n4")
