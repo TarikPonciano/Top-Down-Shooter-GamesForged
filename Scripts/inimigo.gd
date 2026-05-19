@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 var SPEED = 300.0
 var direcao = Vector2.ZERO
 
@@ -9,6 +8,7 @@ var direcao = Vector2.ZERO
 func _physics_process(delta: float) -> void:
 	#TENTAR FAZER O ZUMBI OLHAR PARA O JOGADOR
 	mover()
+	rotacionar_corpo()
 	
 	move_and_slide()
 
@@ -18,3 +18,6 @@ func mover():
 		
 		velocity = direcao * SPEED
 	
+func rotacionar_corpo():
+	if jogador:
+		look_at(jogador.global_position)
