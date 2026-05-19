@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dbrf30ip2ycv6"]
+
+[ext_resource type="Script" uid="uid://d143sb8rf7k55" path="res://Scripts/inimigo.gd" id="1_8p8dk"]
+[ext_resource type="Texture2D" uid="uid://bc1372t5u8hrm" path="res://Assets/Skins.png" id="2_ayero"]
+[ext_resource type="Texture2D" uid="uid://bqaeo6rpbhrup" path="res://Assets/Skin-Zumbi.png" id="3_qpp8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enrbn"]
+size = Vector2(48.75001, 102.50003)
+
+[node name="Inimigo" type="CharacterBody2D" unique_id=1119716269]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_8p8dk")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1685742357]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+
+[node name="Corpo" type="Sprite2D" parent="Sprite" unique_id=1712465315]
+texture = ExtResource("2_ayero")
+region_enabled = true
+region_rect = Rect2(2971, 299, 197, 105)
+
+[node name="Braço Esquerdo" type="Sprite2D" parent="Sprite" unique_id=1739024148]
+position = Vector2(-68.75, -97.49999)
+rotation = 0.07477771
+scale = Vector2(0.24, 0.3394769)
+texture = ExtResource("3_qpp8r")
+region_enabled = true
+region_rect = Rect2(504, 275, 206, 666)
+
+[node name="Braço Direito" type="Sprite2D" parent="Sprite" unique_id=937037523]
+position = Vector2(59.99999, -102.499985)
+rotation = -0.14882372
+scale = Vector2(0.24, 0.33707535)
+texture = ExtResource("3_qpp8r")
+region_enabled = true
+region_rect = Rect2(1290, 275, 206, 666)
+
+[node name="Cabeça" type="Sprite2D" parent="Sprite" unique_id=2017464103]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_qpp8r")
+region_enabled = true
+region_rect = Rect2(819, 873, 434, 426)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=824572736]
+position = Vector2(3.1249986, -2.3841853e-06)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_enrbn")

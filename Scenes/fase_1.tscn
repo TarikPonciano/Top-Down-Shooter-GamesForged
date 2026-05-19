@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://bvlhjpe3p717l"]
 
 [ext_resource type="PackedScene" uid="uid://gfksrepxh8se" path="res://Scenes/Jogador.tscn" id="1_l3mkw"]
+[ext_resource type="PackedScene" uid="uid://dbrf30ip2ycv6" path="res://Scenes/inimigo.tscn" id="2_acukj"]
 
 [node name="Fase 1" type="Node2D" unique_id=787479242]
+
+[node name="Inimigo" parent="." unique_id=1119716269 node_paths=PackedStringArray("jogador") instance=ExtResource("2_acukj")]
+position = Vector2(665, 265)
+jogador = NodePath("../Jogador")
 
 [node name="Jogador" parent="." unique_id=950448249 instance=ExtResource("1_l3mkw")]
 position = Vector2(250, 258)

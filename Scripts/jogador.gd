@@ -26,6 +26,7 @@ func disparar():
 	
 	#2. Configurar a bala (Posição Inicial e Direção)
 	nova_bala.global_position = ponta_arma.global_position
+	
 	nova_bala.direcao = (ponta_arma.global_position - global_position).normalized()
 	
 	#Ajuste necessário para balas que não são redondas
@@ -39,6 +40,8 @@ func disparar():
 	som_tiro.play(1)
 	await get_tree().create_timer(0.1).timeout
 	som_tiro.stop()
+	
+	
 
 func mover():
 	
