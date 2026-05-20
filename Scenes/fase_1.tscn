@@ -11,3 +11,5 @@ jogador = NodePath("../Jogador")
 
 [node name="Jogador" parent="." unique_id=950448249 instance=ExtResource("1_l3mkw")]
 position = Vector2(250, 258)
+
+[node name="Inimigo2" parent="." unique_id=725371860 instance=ExtResource("2_acukj")]

@@ -7,7 +7,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enrbn"]
 size = Vector2(48.75001, 102.50003)
 
-[node name="Inimigo" type="CharacterBody2D" unique_id=1119716269]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8p8dk"]
+size = Vector2(78.75, 91.24999)
+
+[node name="Inimigo" type="CharacterBody2D" unique_id=1119716269 groups=["Inimigos"]]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_8p8dk")
 
@@ -46,3 +49,13 @@ region_rect = Rect2(819, 873, 434, 426)
 position = Vector2(3.1249986, -2.3841853e-06)
 scale = Vector2(0.99999964, 0.99999964)
 shape = SubResource("RectangleShape2D_enrbn")
+
+[node name="AreaAtaque" type="Area2D" parent="." unique_id=1881541128]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=107866548]
+position = Vector2(68.12499, -0.6250082)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_8p8dk")
+debug_color = Color(0.9981851, 0, 0.15945682, 0.41960785)
+
+[connection signal="body_entered" from="AreaAtaque" to="." method="_on_area_ataque_body_entered"]

@@ -14,6 +14,11 @@ config/name="Top Down Shooter Games Forged"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://Assets/icon.svg"
 
+[global_group]
+
+Inimigos=""
+Players=""
+
 [input]
 
 atirar={
