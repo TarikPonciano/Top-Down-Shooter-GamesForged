@@ -52,7 +52,8 @@ func rotacionar_corpo():
 	look_at(get_global_mouse_position())
 	
 func tomar_dano():
-	self.queue_free()
+	get_tree().reload_current_scene()
+	#self.queue_free()
 	
 	
 	
