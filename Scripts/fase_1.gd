@@ -37,9 +37,9 @@ func spawn_avancado():
 			novo_inimigo.global_position = global_position + pos_final
 			break
 			
-		novo_inimigo.jogador = jogador
-		
-		get_tree().current_scene.add_child(novo_inimigo)
+	novo_inimigo.jogador = jogador
+	
+	get_tree().current_scene.add_child(novo_inimigo)
 			
 	
 
