@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var SPEED = 300.0
 var direcao = Vector2.ZERO
+@export var vida := 25
 
 @export var jogador: CharacterBody2D
 
@@ -22,8 +23,10 @@ func rotacionar_corpo():
 	if jogador:
 		look_at(jogador.global_position)
 
-func tomar_dano():
-	self.queue_free()
+func tomar_dano(dano_recebido):
+	vida -= dano_recebido
+	if vida <= 0:
+		self.queue_free()
 
 func _on_area_ataque_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Players"):
