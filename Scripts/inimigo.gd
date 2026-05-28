@@ -6,6 +6,12 @@ var direcao = Vector2.ZERO
 
 @export var jogador: CharacterBody2D
 
+@onready var barra_de_vida := $BarraDeVida
+
+func _ready() -> void:
+	barra_de_vida.max_value = vida
+	barra_de_vida.value = vida
+
 func _physics_process(delta: float) -> void:
 	#TENTAR FAZER O ZUMBI OLHAR PARA O JOGADOR
 	mover()
@@ -25,6 +31,7 @@ func rotacionar_corpo():
 
 func tomar_dano(dano_recebido):
 	vida -= dano_recebido
+	barra_de_vida.value = vida
 	if vida <= 0:
 		self.queue_free()
 

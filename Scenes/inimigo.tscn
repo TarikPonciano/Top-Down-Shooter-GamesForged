@@ -10,6 +10,18 @@ size = Vector2(48.75001, 102.50003)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8p8dk"]
 size = Vector2(78.75, 91.24999)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8p8dk"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ayero"]
+bg_color = Color(0, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
 [node name="Inimigo" type="CharacterBody2D" unique_id=1119716269 groups=["Inimigos"]]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_8p8dk")
@@ -57,5 +69,19 @@ position = Vector2(68.12499, -0.6250082)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_8p8dk")
 debug_color = Color(0.9981851, 0, 0.15945682, 0.41960785)
+
+[node name="BarraDeVida" type="ProgressBar" parent="." unique_id=147901545]
+offset_left = -49.566425
+offset_top = 73.75
+offset_right = 104.18356
+offset_bottom = 79.06644
+rotation = -1.5707964
+theme_override_styles/background = SubResource("StyleBoxFlat_8p8dk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ayero")
+max_value = 25.0
+value = 10.0
+show_percentage = false
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2075946542]
 
 [connection signal="body_entered" from="AreaAtaque" to="." method="_on_area_ataque_body_entered"]
