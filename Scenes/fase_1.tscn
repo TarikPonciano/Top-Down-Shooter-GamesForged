@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bywq7hqeb70y7" path="res://Scripts/fase_1.gd" id="1_acukj"]
 [ext_resource type="PackedScene" uid="uid://gfksrepxh8se" path="res://Scenes/Jogador.tscn" id="1_l3mkw"]
+[ext_resource type="PackedScene" uid="uid://mevy3355ivlb" path="res://Scenes/hud_round.tscn" id="3_cq7l2"]
 
 [node name="Fase 1" type="Node2D" unique_id=787479242]
 script = ExtResource("1_acukj")
@@ -26,5 +27,7 @@ position = Vector2(202, 477)
 [node name="Spawn1" type="Marker2D" parent="SpawnPoints" unique_id=1827272537]
 position = Vector2(167, 124)
 rotation = -0.0018294206
+
+[node name="HUD Round" parent="." unique_id=1598797569 instance=ExtResource("3_cq7l2")]
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
