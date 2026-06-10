@@ -25,6 +25,7 @@ border_blend = true
 [node name="Inimigo" type="CharacterBody2D" unique_id=1119716269 groups=["Inimigos"]]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_8p8dk")
+vida = 10
 
 [node name="Sprite" type="Node2D" parent="." unique_id=1685742357]
 rotation = 1.5707964

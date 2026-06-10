@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Top Down Shooter Games Forged"
+run/main_scene="uid://bvlhjpe3p717l"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+Global="*uid://yerj685e7ins"
 
 [global_group]
 
