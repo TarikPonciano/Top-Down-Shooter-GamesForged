@@ -3,6 +3,7 @@ extends CanvasLayer
 var tempoMaximo = 10
 var tempoPassado = 0
 @onready var tempo_round = $"Tempo do Round"
+
 @onready var round_atual = $"Round Atual"
 
 

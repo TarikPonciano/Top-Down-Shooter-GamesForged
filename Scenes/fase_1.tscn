@@ -3,6 +3,49 @@
 [ext_resource type="Script" uid="uid://bywq7hqeb70y7" path="res://Scripts/fase_1.gd" id="1_acukj"]
 [ext_resource type="PackedScene" uid="uid://gfksrepxh8se" path="res://Scenes/Jogador.tscn" id="1_l3mkw"]
 [ext_resource type="PackedScene" uid="uid://mevy3355ivlb" path="res://Scenes/hud_round.tscn" id="3_cq7l2"]
+[ext_resource type="Texture2D" uid="uid://n113y52dpsr8" path="res://Assets/void.png" id="4_efuq8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_efuq8"]
+texture = ExtResource("4_efuq8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gw3gf"]
+sources/0 = SubResource("TileSetAtlasSource_efuq8")
 
 [node name="Fase 1" type="Node2D" unique_id=787479242]
 script = ExtResource("1_acukj")
@@ -29,5 +72,9 @@ position = Vector2(167, 124)
 rotation = -0.0018294206
 
 [node name="HUD Round" parent="." unique_id=1598797569 instance=ExtResource("3_cq7l2")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1538577066]
+position = Vector2(0, 1)
+tile_set = SubResource("TileSet_gw3gf")
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
