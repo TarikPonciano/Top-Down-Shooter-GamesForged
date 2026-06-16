@@ -48,10 +48,13 @@ func mover():
 	direcao = Input.get_vector("andar_esquerda", "andar_direita", "andar_cima", "andar_baixo")
 	velocity = direcao * SPEED
 	
+	
+	
 func rotacionar_corpo():
 	look_at(get_global_mouse_position())
 	
 func tomar_dano():
+	Global.round = 1
 	get_tree().reload_current_scene()
 	#self.queue_free()
 	
