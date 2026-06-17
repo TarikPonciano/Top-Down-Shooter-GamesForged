@@ -5,6 +5,7 @@ var direcao = Vector2.ZERO
 @export var vida := 10
 
 @export var jogador: CharacterBody2D
+@export var dinheiro_cena : PackedScene
 
 @onready var barra_de_vida := $BarraDeVida
 
@@ -36,7 +37,15 @@ func tomar_dano(dano_recebido):
 	vida -= dano_recebido
 	barra_de_vida.value = vida
 	if vida <= 0:
+		derrubar_dinheiro()
 		self.queue_free()
+
+func derrubar_dinheiro():
+	var novo_dinheiro = dinheiro_cena.instantiate()
+	
+	novo_dinheiro.global_position = global_position
+	
+	get_tree().current_scene.add_child(novo_dinheiro)
 
 func _on_area_ataque_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Players"):

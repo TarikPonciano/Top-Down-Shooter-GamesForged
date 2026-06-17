@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d143sb8rf7k55" path="res://Scripts/inimigo.gd" id="1_8p8dk"]
 [ext_resource type="Texture2D" uid="uid://bc1372t5u8hrm" path="res://Assets/Skins.png" id="2_ayero"]
+[ext_resource type="PackedScene" uid="uid://dk0tac1jnrfva" path="res://Scenes/coletável_dinheiro.tscn" id="2_qpp8r"]
 [ext_resource type="Texture2D" uid="uid://bqaeo6rpbhrup" path="res://Assets/Skin-Zumbi.png" id="3_qpp8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enrbn"]
@@ -25,6 +26,7 @@ border_blend = true
 [node name="Inimigo" type="CharacterBody2D" unique_id=1119716269 groups=["Inimigos"]]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_8p8dk")
+dinheiro_cena = ExtResource("2_qpp8r")
 
 [node name="Sprite" type="Node2D" parent="." unique_id=1685742357]
 rotation = 1.5707964
