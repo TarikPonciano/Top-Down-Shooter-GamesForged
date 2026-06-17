@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://mevy3355ivlb"]
 
 [ext_resource type="Script" uid="uid://d4m611hak4n5" path="res://Scripts/hud_round.gd" id="1_bs8ii"]
+[ext_resource type="Texture2D" uid="uid://cmpvy61tgde4l" path="res://Assets/Circulo_branco.png" id="2_2mjsd"]
 
 [node name="HUD Round" type="CanvasLayer" unique_id=1598797569]
 script = ExtResource("1_bs8ii")
@@ -30,5 +31,44 @@ text = "Round: 1"
 
 [node name="Cronometro Round" type="Timer" parent="." unique_id=1571252236]
 autostart = true
+
+[node name="Panel" type="Panel" parent="." unique_id=58226872]
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 176.0
+offset_bottom = 72.0
+
+[node name="Sprite" type="Node2D" parent="Panel" unique_id=1327447287]
+position = Vector2(40, 24)
+
+[node name="ColorRect" type="ColorRect" parent="Panel/Sprite" unique_id=557002488]
+offset_left = -34.0
+offset_top = -20.0
+offset_right = 34.0
+offset_bottom = 20.0
+color = Color(0, 0.32156864, 0, 0.53333336)
+
+[node name="CirculoBranco" type="Sprite2D" parent="Panel/Sprite" unique_id=2089892650]
+position = Vector2(7.6293945e-06, 1.9073486e-06)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_2mjsd")
+
+[node name="Label" type="Label" parent="Panel/Sprite" unique_id=700844276]
+offset_left = -10.0
+offset_top = -13.0
+offset_right = 12.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "$"
+horizontal_alignment = 1
+
+[node name="Total Dinheiro" type="Label" parent="Panel" unique_id=1601799130]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 152.0
+offset_bottom = 48.0
+text = "$ 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="Cronometro Round" to="." method="_on_cronometro_round_timeout"]

@@ -5,11 +5,14 @@ var tempoPassado = 0
 @onready var tempo_round = $"Tempo do Round"
 
 @onready var round_atual = $"Round Atual"
-
+@onready var contador_dinheiro = $"Panel/Total Dinheiro"
 
 func _ready() -> void:
 	atualizar_relogio()
 	atualizar_round()
+	
+func _process(delta: float) -> void:
+	contador_dinheiro.text = "$" + str(Global.dinheiros)
 
 func _on_cronometro_round_timeout() -> void:
 	tempoPassado += 1

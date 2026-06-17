@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dk0tac1jnrfva"]
 
+[ext_resource type="Script" uid="uid://bmuuub8tbrfa" path="res://Scripts/coletável_dinheiro.gd" id="1_oru2t"]
 [ext_resource type="Texture2D" uid="uid://cmpvy61tgde4l" path="res://Assets/Circulo_branco.png" id="1_teco5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_teco5"]
 size = Vector2(68, 41)
 
 [node name="ColetávelDinheiro" type="Area2D" unique_id=596320875]
+script = ExtResource("1_oru2t")
 
 [node name="Sprite" type="Node2D" parent="." unique_id=1267622013]
 
@@ -33,3 +35,5 @@ horizontal_alignment = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1016458733]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_teco5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

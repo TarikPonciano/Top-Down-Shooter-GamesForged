@@ -41,6 +41,7 @@ func tomar_dano(dano_recebido):
 		self.queue_free()
 
 func derrubar_dinheiro():
+
 	var novo_dinheiro = dinheiro_cena.instantiate()
 	
 	novo_dinheiro.global_position = global_position
