@@ -9,7 +9,7 @@ var direcao = Vector2.ZERO
 @onready var barra_de_vida := $BarraDeVida
 
 func _ready() -> void:
-	# 1 é a bae, 0.1 * (Global.round - 1) aumenta a dificuldade em 10% para cada round passado
+	# 1 é a base, 0.1 * (Global.round - 1) aumenta a dificuldade em 10% para cada round passado
 	vida = vida * (1 + (0.1 * (Global.round-1)))
 	
 	barra_de_vida.max_value = vida

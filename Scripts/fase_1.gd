@@ -4,7 +4,6 @@ extends Node2D
 @onready var jogador = $Jogador
 
 var cena_inimigo = preload("res://Scenes/inimigo.tscn")
-
 func spawn_simples():
 	# Pega o nó SpawnPoints, seleciona todos os nós dentro dele e por fim escolhe um aleatório
 	var spawn_escolhido = pontos_spawn.get_children().pick_random()

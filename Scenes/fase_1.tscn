@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bywq7hqeb70y7" path="res://Scripts/fase_1.gd" id="1_acukj"]
 [ext_resource type="PackedScene" uid="uid://gfksrepxh8se" path="res://Scenes/Jogador.tscn" id="1_l3mkw"]
 [ext_resource type="PackedScene" uid="uid://mevy3355ivlb" path="res://Scenes/hud_round.tscn" id="3_cq7l2"]
+[ext_resource type="Script" uid="uid://d1tealolxlgtt" path="res://Scripts/spawn_timer.gd" id="3_gw3gf"]
 [ext_resource type="Texture2D" uid="uid://n113y52dpsr8" path="res://Assets/void.png" id="4_efuq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_efuq8"]
@@ -55,6 +56,7 @@ position = Vector2(562, 315)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=462264179]
 autostart = true
+script = ExtResource("3_gw3gf")
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=996974359]
 
